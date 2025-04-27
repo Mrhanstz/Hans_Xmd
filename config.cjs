@@ -5,8 +5,8 @@ const fs = require("fs");
 require("dotenv").config();
 
 const config = {
-  SESSION_ID: process.env.SESSION_ID || "",
-  PREFIX: process.env.PREFIX || '.',
+  SESSION_ID: process.env.SESSION_ID || "HANSTZ$HEhjCtu1",
+  PREFIX: process.env.PREFIX || '/',
   AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN !== undefined ? process.env.AUTO_STATUS_SEEN === 'true' : true, 
   AUTO_DL: process.env.AUTO_DL !== undefined ? process.env.AUTO_DL === 'true' : false,
   AUTO_READ: process.env.AUTO_READ !== undefined ? process.env.AUTO_READ === 'true' : false,
@@ -16,8 +16,12 @@ const config = {
   AUTO_REACT: process.env.AUTO_REACT !== undefined ? process.env.AUTO_REACT === 'true' : false,
    /*auto block only for 221 */
   AUTO_BLOCK: process.env.AUTO_BLOCK !== undefined ? process.env.AUTO_BLOCK === 'true' : true,
-  REJECT_CALL: process.env.REJECT_CALL !== undefined ? process.env.REJECT_CALL === 'true' : false, 
+  REJECT_CALL: process.env.REJECT_CALL !== undefined ? process.env.REJECT_CALL === 'true' : false,
+  CHATBOT: process.env.CHATBOT !== undefined ? process.env.CHATBOT === 'true' : false,
   NOT_ALLOW: process.env.NOT_ALLOW !== undefined ? process.env.NOT_ALLOW === 'true' : true,
+ANTI_LINK: process.env.ANTI_LINK !== undefined ? process.env.ANTI_LINK === 'true' : false, // Control if Antilink is on or off
+  ACTION: null, // The action (delete, warn, kick) selected for Antilink
+  WARNINGS: {}, // Object to keep track of warnings for users (for warn action)
   MODE: process.env.MODE || "public",
   OWNER_NAME: process.env.OWNER_NAME || "©HansTz",
   OWNER_NUMBER: process.env.OWNER_NUMBER || "263717087382",
