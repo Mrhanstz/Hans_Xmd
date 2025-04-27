@@ -10,7 +10,7 @@
     "restart": "pm2 restart HansXmd"
   },
   "keywords": ["Hans", "whatsapp-bot", "bot"],
-  "author": "lord joel",
+  "author": "HansTech",
   "license": "ISC",
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
